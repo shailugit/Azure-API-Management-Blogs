@@ -6,7 +6,7 @@ When you create an Azure API Management service instance, Azure assigns a domain
 ## Pre-requirements
 
 Before we start, we could make sure that we have APIM service created
-	• How to create APIM service  
+How to create APIM service   [here]([https://github.com/shailugit/GrpcServer](https://learn.microsoft.com/en-us/azure/api-management/get-started-create-service-instance)).
 Obtain a custom domain name owned by you or your organization.
 
 ## Steps:
@@ -15,7 +15,7 @@ Obtain a custom domain name owned by you or your organization.
   - Once done we should have a valid certificate with a public and private key (.PFX) matches the domain name for DNS Configuration. 
   - Later we have to host DNS records on a DNS server to map the custom domain name to the default domain name of your API Management instance. Please follow the document available here which explain how to map an existing custom DNS name to endpoints exposed by an API Management instance. However follow the below steps to capture your domain name and how to map it with your API Management instance. 
 	- Create an API Management instance using the steps in the document below. 
-  https://learn.microsoft.com/en-us/azure/api-management/api-management-get-started#a-namecreate-service-instance-acreate-an-api-management-instance. For the demo we will be creating APIM for Developer Tier and not on the VNET mode. 
+  https://learn.microsoft.com/en-us/azure/api-management/api-management-get-started#a-namecreate-service-instance-acreate-an-api-management-instance. For the demo we will be creating APIM for Developer Tier and not using the VNET mode. 
 
 -----
 ## image
