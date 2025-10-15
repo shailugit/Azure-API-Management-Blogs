@@ -44,7 +44,13 @@ When you create an Azure API Management service instance, Azure assigns a domain
    Since we need PFX files for our APIM instance hence download the .PFX file. 
    To create a password-protected .PFX file, you have to provide the private key and a password. Please do select create intermediate certificate option and provide the private key and password for PFX file.
 ![image info](ImagesRef/5.png)
+![image info](ImagesRef/6.png)
+
 - Please note that the certificate is required with a public and private key (.PFX) and subject or subject alternative name (SAN) must match the domain name which will enable your API Management instance to securely expose URLs over SSL.
 - Now to setup the custom domain go to your APIM instance and select Custom domain blade under Deployment +Infrastructure. Here is a default domain provided my APIM service. To add your custom domain  Click on + Add button
+![image info](ImagesRef/8.png)
 - For the demo purpose I am adding the certificate for my Gateway and Developer portal, the option below is using certificate file directly loading to Azure API management however if you prefer you can select certificate from Key Vault. The host name here for Gateway is api.aztechbytes.com and for developer portal is developer.aztechbytes.com.
-![image info](ImagesRef/6.png)
+![image info](ImagesRef/8.png)
+
+- Since I am using custom domain for gateway and developer portal hence I added both under Custom domain. Adding custom domain may take up to 45+ min and your developer SKU will be down for this operation. Once the custom domain updated scessfully you will see the names under your APIM>Custom domain. Now call your APIM endpoint using your custom domain and customize your APIM developer portal.
+![image info](ImagesRef/9.png)
