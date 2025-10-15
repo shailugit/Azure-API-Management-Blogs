@@ -5,9 +5,9 @@ When you create an Azure API Management service instance, Azure assigns a domain
 
 ## Pre-requirements
 
-Before we start, we could make sure that we have APIM service created
-How to create APIM service   [here]([https://github.com/shailugit/GrpcServer](https://learn.microsoft.com/en-us/azure/api-management/get-started-create-service-instance)).
-Obtain a custom domain name owned by you or your organization.
+- Before we start, we could make sure that we have APIM service created
+- How to create APIM service [here]([https://github.com/shailugit/GrpcServer](https://learn.microsoft.com/en-us/azure/api-management/get-started-create-service-instance).
+- Obtain a custom domain name owned by you or your organization.
 
 ## Steps:
  
