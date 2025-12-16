@@ -13,24 +13,27 @@ When you create an Azure API Management service instance, Azure assigns a domain
  
   - To set up a custom domain in Azure API Management (APIM) we should have APIM instance available and obtain a custom domain name.
   - Once done we should have a valid certificate with a public and private key (.PFX) matches the domain name for DNS Configuration. 
-  - Later we have to host DNS records on a DNS server to map the custom domain name to the default domain name of your API Management instance. Please follow the document available here which explain how to map an existing custom DNS name to endpoints exposed by an API Management instance. However follow the below steps to capture your domain name and how to map it with your API Management instance. 
-	- Create an API Management instance using the steps in the document below. 
-  https://learn.microsoft.com/en-us/azure/api-management/api-management-get-started#a-namecreate-service-instance-acreate-an-api-management-instance. For the demo we will be creating APIM for Developer Tier and not using the VNET mode. 
+  - Later we have to host DNS records on a DNS server to map the custom domain name to the default domain name of your API Management instance.
+  - Please follow the below steps to capture your domain name and how to map it with your API Management instance. 
+	- First you need to create an API Management instance using the steps in the document below, for the same I am using APIM Developer Tier. Please note that we are not using APIM in VNET mode as it may need additional changes in case you are using your own DNS server.
+  https://learn.microsoft.com/en-us/azure/api-management/api-management-get-started#a-namecreate-service-instance-acreate-an-api-management-instance.       
 
 -----
 ![image info](ImagesRef/1.png)
 
-- To purchase the custom domain you can look for various domain name registrars like Namecheap, GoDaddy, Google Domains, or others. However for our demo purpose I am using the IONOS service here. 
-    You can also use the Azure App service domain https://learn.microsoft.com/en-us/azure/app-service/manage-custom-dns-buy-domain but I got good discount at https://www.ionos.com/ and able to procure my domain in less than a dollar for a year. 
+- The first step is to have a custom domain name. To purchase the custom domain you can look for various domain name registrars like Namecheap, GoDaddy, Google Domains, or any other service providers. However for our demo purpose I am using the IONOS service here.
+- You can also use the Azure App service domain https://learn.microsoft.com/en-us/azure/app-service/manage-custom-dns-buy-domain but I since I get a good discount at https://www.ionos.com/ and able to procure my domain in less than a dollar for a year hence I am using this service. 
 - To purchase the domain look for the any of the above domain provider or check out the domain name. 
-    As of writing this article I don't see any registrars providing free service. The IONOS will take 6-8 hours to confirm the availability of your domain. 
-    This is how your order will look like once you created the order it will allow you to create a login for IONOS where you are configure your domain and purchase other products offered.
+    I google free custom domain service however as of writing this article I don't see any registrars providing free services.
+- Since I used IONOS I need to login and create a account(Simple step).
+- Then look for your domain name if available and purchase it. 
+  This service will provide you free email and other offers however please see fit based on your needs. The IONOS will take 6-8 hours to confirm the availability of your domain. 
+  This is how your order will look like once you create and submit the order to purchase a domain name. The potal will allow you to create a login for IONOS where you are configure your domain and purchase other products offered.
 
 ![image info](ImagesRef/2.png)
 
 - Confirm your order and agree on the contract details since it will auto renew, so if you are just using this for testing purpose please check your bill for next year(if you would like to continue or not). 
-    This service will provide you free email and other offers however please see fit based on your needs.
-- We just need to setup our Custom domain hence I purchase Domain and SSL only option and once domain is available you will receive the email confirmation. This is how your domain registration looks like once your domain is ready to use and you logged in to your IONOS dashboard.
+- I just need to setup our Custom domain hence I purchase Domain and SSL only option and once domain is available you will receive the email confirmation. This is how your domain registration looks like once your domain is ready to use and you logged in to your IONOS dashboard.
 	
 ![image info](ImagesRef/3.png)
 
