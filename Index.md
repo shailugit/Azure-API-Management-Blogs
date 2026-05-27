@@ -3,7 +3,7 @@
 # Table of Contents
 1. [Introduction](#introduction)
 2. [Setup](#setup)
-3. [Policy](#APIMPolicies and Configuration)
+3. [Policy](#APIM Policies and Configuration)
 4. [Backends](#Backends)
 5. [Security](#Security)
 6. [Troubleshooting](#Troubleshooting)
@@ -11,45 +11,81 @@
 
 
 ## Introduction
-APIM Features and important points
+- APIM Features and important points
 
 ## Setup
-Deploy APIM Classic Tier
-Deploy APIM Internal Vnet Mode
-Deploy APIM Internal Vnet Mode
-Adding Private Endpoint to APIM
-Deploy APIM V2 Tier
-Deploy APIM V2 with Outbound VNET access
-Adding custom domain
+- Deploy APIM Classic Tier
+  - Deploy APIM Internal Vnet Mode
+  - Deploy APIM External Vnet Mode
+  - Adding Private Endpoint to APIM
+- Deploy APIM V2 Tier
+ - Deploy APIM V2 with Outbound VNET access
+- Adding custom domain
+- APIM with App Gateway
+- APIM with Front Door
+- WorkSpace in APIM
 
 ## APIM Policies and Configuration
-Basic APIM Policy Samples 
-VS Code integration
-GIT integration
+- Basic APIM Policy Samples
+  - Rate Limit
+  - Caching
+  - Transformation
+  - Error handling
+  - JWT Authetication
+- VS Code integration
+- GIT integration
+- CI/CD integration
 
 ## Backends 
-App Service backend
-Logic App backend 
-OpenAI backends
-AI integrations
+- App Service backend
+  - Logic App backend
+  - Function App Backend
+- OpenAI backends
+  - Foundary AI
+  - Language integrations
+  - MCP API
+  - A2A API
+- APIM Load balancer multiple backends
+- Circuit breaker
+- Streaming APIs
+- Blob API
+- WebSocket API
+- gRPC API
+- Graph QL
 
 ## Security
-Certificates
-Authetication and Authorization 
+- Certificates
+  - Create Self Sign
+  - Create CA certificate
+- APIM Client Certificates
+- APIM Backend Certificates
+- Authetication and Authorization
+  - Autheticate via Entra ID
+  - Autheticate APIM via Client Certificate
+  - Autheticate backend via Client Certificate
+  - Authorization via EntraID
+  - Authorization products and APIs with EntraID
 
 ## Troubleshooting and Monitoring
-Basic Troubleshooting 
-Monitoring APIM
-Tracing APIM
-App Insight and Azure monitor
+- Basic Troubleshooting 
+- Tracing in APIM
+- App Insight with APIM
+- Azure monitor with APIM
+- Log to EventHub
+- LLM Logging in APIM
+- Common Errors and issues
 
 ## Self Hosted Gateway
-APIM with Docker
-APIM with AKS
+- APIM with Docker
+- APIM with AKS
+- Certificate for SHG
+- Tracing and logging
 
 ## Developer Portal
-APIM Develper portal and customization
+- APIM Develper portal and customization
+- Authorize with Entra ID
+- Azure B2C
 
 ## APIM Rest Sample calls
-Sample REST API calls for APIM
+- Sample REST API calls for APIM
 
