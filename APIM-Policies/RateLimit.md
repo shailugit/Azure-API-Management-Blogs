@@ -91,3 +91,4 @@ trace (0.058 ms)
 - Always test with tools like Postman or curl
 - Refer offical document to further read on this policy
   -  https://learn.microsoft.com/en-us/azure/api-management/rate-limit-by-key-policy#usage-notes
+  -  https://learn.microsoft.com/en-us/azure/api-management/api-management-sample-flexible-throttling
