@@ -21,13 +21,29 @@ Open your APIM instance
   - Go to Azure portal and search for “API Management services” and select your APIM instance from the list. 
 Add RATELIMIT policy at the desired scope
   - To configure at API level (most common):
+  - Click save to update and save the policy
 
 ## Rate Limit
 ```
 <inbound>
     <base />
-    <rate-limit calls="10" renewal-period="60" />
+    <rate-limit calls="3" renewal-period="60" />
 </inbound>
+```
+
+If you call the endpoint more than 3 time within a minute and run the traces with your APIM service it wil show you the rate limit (sample)
+```
+rate-limit (0.834 ms)
+{
+    "message": "Rate limit was exceeded.",
+    "retryAfter": "00:00:37.5093691",
+    "rateLimit": {
+        "counterKey": 3884232709115864600,
+        "period": "00:01:00",
+        "callLimit": 3,
+        "count": 3
+    }
+}
 ```
 
 ## Rate Limit Per Subscription Key
@@ -41,8 +57,31 @@ Add RATELIMIT policy at the desired scope
 </inbound>
 ```
 
+To troubleshoot the Rate limit leverage the APIM traces and you can use a variable to store the remaining Calls.
+After each policy execution, the remaining calls allowed in the time period are stored in the variable which will help to further investigate the rate limit issue.
+Refer the below code which can be used to traced the remaining Calls, run the APIM traces to check the rate limit and remaining Calls
 
-Click Save to apply.
+**Code**
+```
+<rate-limit calls="3" renewal-period="60" remaining-calls-variable-name="remainingCallsPerSubscription" />
+        <trace source="MyPolicyDebug" severity="information">
+            <message>@($"The value of myVariable is: {context.Variables.GetValueOrDefault("remainingCallsPerSubscription")}")</message>
+        </trace>
+```
+**Traces results**
+``` 
+rate-limit (0.051 ms)
+{
+    "message": "RateLimit counter 3884232709115864570 is incremented"
+}
+trace (0.058 ms)
+{
+    "message": "Expression was successfully evaluated.",
+    "expression": "$\"The value of myVariable is: {context.Variables.GetValueOrDefault(\"remainingCallsPerSubscription\")}\"",
+    "value": "The value of myVariable is: 2"
+}
+```
+
 
 ⭐ Best Practices
 - This policy can never be accurate hence when you are configuring the policy make sure not too add very low calls or renewal-period
