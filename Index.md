@@ -32,6 +32,7 @@
   - Transformation
   - Error handling
   - JWT Authetication
+  - APIM AI Policies
 - VS Code integration
 - GIT integration
 - CI/CD integration
