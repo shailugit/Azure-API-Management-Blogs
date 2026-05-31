@@ -3,7 +3,7 @@
 The rate‑limit policy in APIM controls how many requests a client can make within a specific time window. It helps you to protect backend services from overload and prevent abuse or accidental traffic spikes
 You can apply throttling per subscription, per key, per IP, or globally 
 
-APIM does have two Types of Throttling in APIM
+APIM does have two Types of Throttling in APIM, please note that this 
 1. rate-limit-by-key (MOST COMMON)
 2. rate-limit
 
@@ -45,7 +45,10 @@ Add RATELIMIT policy at the desired scope
 Click Save to apply.
 
 ⭐ Best Practices
+- This policy can never be accurate hence when you are configuring the policy make sure not too add very low calls or renewal-period
 - Use rate-limit-by-key instead of global rate-limit for fairness
 - Apply limits at product level for cleaner management
 - Use different limits for read vs write operations
 - Always test with tools like Postman or curl
+- Refer offical document to further read on this policy
+  -  https://learn.microsoft.com/en-us/azure/api-management/rate-limit-by-key-policy#usage-notes
