@@ -3,7 +3,7 @@
 The rate‑limit policy in APIM controls how many requests a client can make within a specific time window. It helps you to protect backend services from overload and prevent abuse or accidental traffic spikes
 You can apply throttling per subscription, per key, per IP, or globally 
 
-APIM does have two Types of Throttling in APIM, please note that this 
+APIM does have two Types of Throttling in APIM, APIM enforces this at the gateway level before the request reaches your backend.
 1. rate-limit-by-key (MOST COMMON)
 2. rate-limit
 
