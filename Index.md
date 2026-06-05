@@ -7,7 +7,8 @@
 4. [Backends](#Backends)
 5. [Security](#Security)
 6. [Troubleshooting](#Troubleshooting)
-7. [SHG](#SelfHostedGateway)
+7. [SHG](#Self-Hosted-Gateway)
+9. [Developer Portal](#Developer-Portal)
 
 
 ## Introduction
