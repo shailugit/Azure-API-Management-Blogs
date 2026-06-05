@@ -3,7 +3,7 @@
 # Table of Contents
 1. [Introduction](#introduction)
 2. [Setup](#setup)
-3. [Policy](#APIM Policies and Configuration)
+3. [Policy](#Policies-and-Configuration)
 4. [Backends](#Backends)
 5. [Security](#Security)
 6. [Troubleshooting](#Troubleshooting)
@@ -19,13 +19,13 @@
   - Deploy APIM External Vnet Mode
   - Adding Private Endpoint to APIM
 - Deploy APIM V2 Tier
- - Deploy APIM V2 with Outbound VNET access
+- Deploy APIM V2 with Outbound VNET access
 - Adding custom domain
 - APIM with App Gateway
 - APIM with Front Door
 - WorkSpace in APIM
 
-## APIM Policies and Configuration
+## Policies and Configuration
 - Basic APIM Policy Samples
   - Rate Limit
   - Caching
